@@ -1,4 +1,8 @@
 <?php
+function connexion()
+{
+  # code...
+
  $host = 'localhost';
  $dbname = 'mglsi_news';
  $username = 'root';
@@ -7,10 +11,10 @@
  $dsn = "mysql:host=$host;dbname=$dbname"; 
 
  try{
-    $pdo = new PDO($dsn, $username, $password);
+    return new PDO($dsn, $username, $password);
     
    }catch (PDOException $e){
      echo $e->getMessage();
    }
-
+  }
 ?>
